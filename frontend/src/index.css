@@ -1,28 +1,148 @@
-body {
-  font-family: Arial;
-  margin: 30px;
+﻿body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  color: #333;
 }
 
-input {
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a73e8;
+  padding: 14px 32px;
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-weight: bold;
+}
+
+/* Page Container */
+.page-container {
+  max-width: 680px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Booking Form */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.booking-form label {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+input,
+select {
   display: block;
-  margin: 10px 0;
-  padding: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  background: white;
 }
 
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+.submit-btn {
+  margin-top: 10px;
+  padding: 12px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #1558b0;
+}
+
+/* Live Preview */
+.live-preview {
+  margin: 6px 0;
+  color: #1a73e8;
+  font-size: 0.95rem;
+}
+
+/* Confirmation Card */
+.confirmation-card {
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: #e8f5e9;
+  border-left: 6px solid #34a853;
+  border-radius: 8px;
+}
+
+.confirmation-card h2 {
+  margin-top: 0;
+  color: #2d7a45;
+}
+
+/* Appointment Cards */
 .appointment-card {
-  border: 1px solid black;
+  border: 1px solid #ddd;
   padding: 15px;
   margin: 15px 0;
+  border-radius: 8px;
+  background: white;
 }
 
 .confirmed {
-  border-left: 6px solid green;
+  border-left: 6px solid #34a853;
 }
 
 .pending {
-  border-left: 6px solid orange;
+  border-left: 6px solid #fbbc04;
 }
 
 .cancelled {
-  border-left: 6px solid red;
+  border-left: 6px solid #ea4335;
 }
